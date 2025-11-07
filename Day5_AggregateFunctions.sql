@@ -14,5 +14,5 @@ SELECT MIN(age) AS min_age, MAX(age) AS max_age FROM patients;
 SELECT 
     SUM(patients_admitted) AS total_admitted,
     SUM(patients_refused) AS total_refused,
-    ROUND(AVG(avg_satisfaction), 2) AS avg_satisfaction
+    ROUND(AVG(patient_satisfaction), 2) AS avg_satisfaction
 FROM services_weekly;
