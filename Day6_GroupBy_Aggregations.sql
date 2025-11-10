@@ -29,7 +29,7 @@ SELECT
     service,
     SUM(patients_admitted) AS total_admitted,
     SUM(patients_refused) AS total_refused,
-    ROUND((SUM(patients_admitted) / 
+    ROUND((SUM(patients_admitted)::numeric / 
           (SUM(patients_admitted) + SUM(patients_refused))) * 100, 2) AS admission_rate
 FROM services_weekly
 GROUP BY service
